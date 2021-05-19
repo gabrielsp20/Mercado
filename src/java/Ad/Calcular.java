@@ -2,13 +2,13 @@ package Ad;
 
 public class Calcular {
 
-    private double valor1;
+    private double valor;
     private String operacao;
     private String mensagem = "";
 
-    public void setValor1(String v) {
+    public void setValor(String v) {
         try {
-            this.valor1 = Double.parseDouble(v);
+            this.valor = Double.parseDouble(v);
         } catch (NumberFormatException e) {
             this.mensagem += "<br>O valor  não é um número válido";
         }
@@ -34,13 +34,13 @@ public class Calcular {
 
         switch (operacao) {
             case "op1":
-                resultado = (valor1-(valor1 * 10 / 100));
+                resultado = (valor-(valor * 10 / 100));
                 break;
             case "op2":
-                resultado = (valor1 -(valor1 * 5 / 100));
+                resultado = (valor -(valor * 5 / 100));
                 break;
             case "op3":
-                resultado = (valor1);
+                resultado = (valor);
                 break;
 
         }
